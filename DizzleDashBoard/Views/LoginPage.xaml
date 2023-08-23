@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DizzleDashBoard.LoginPage">
+    
+    <ScrollView>
+        
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="logo.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="#e1e1e1"
+                Padding="10,0,10,0"
+                SemanticProperties.HeadingLevel="Level2">
+
+                <Entry
+                    Text=""
+                    Placeholder="Enter mail id"
+                    HorizontalOptions="FillAndExpand"
+                    PlaceholderColor="Black"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Enter mail id"
+                    FontSize="14"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="#e1e1e1"
+                Padding="10,0,10,0"
+                SemanticProperties.HeadingLevel="Level2">
+
+                <Entry
+                    Text=""
+                    Placeholder="Enter password"
+                    PlaceholderColor="Black"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Enter password"
+                    FontSize="14"
+                    HorizontalOptions="FillAndExpand"
+                    IsPassword="True"/>
+
+            </HorizontalStackLayout>
+
+            <Button
+                x:Name="btn_login"
+                Text="Login"
+                Clicked="OnLoginClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DizzleDashBoard.OverviewPage">
+
+    <ListView x:Name="HospitalListView">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid Padding="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Text="{Binding hospital}"
+                            FontSize="20"
+                            FontFamily="InterRoman"
+                            FontAttributes="Bold" />
+                        <Grid Grid.Column="1"
+                              HorizontalOptions="EndAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label
+                                FontSize="16"
+                                Text="departmentCapacity : "/>
+                            <Label
+                                Grid.Row="1"
+                                FontSize="14"
+                                Text="amountOfPatients : "
+                                FontAttributes="Italic"/>
+                        </Grid>
+                        <Grid Grid.Column="2"
+                              HorizontalOptions="EndAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label
+                                FontSize="16"
+                                Text="{Binding departmentCapacity}"/>
+                            <Label
+                                Grid.Row="1"
+                                FontSize="14"
+                                Text="{Binding amountOfPatients}"
+                                FontAttributes="Italic"/>
+                        </Grid>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
+</ContentPage>
